@@ -35,6 +35,7 @@ SITEURL = ''
 PATH = 'content'
 THEME = "theme"
 STATIC_PATHS = ["images", "extra"]
+EXTRA_PATH_METADATA = {"extra/favicon.ico": {"path": "favicon.ico"}}
 THEME_STATIC_PATHS = ['static']
 
 TIMEZONE = 'Europe/Kiev'

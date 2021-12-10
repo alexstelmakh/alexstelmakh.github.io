@@ -28,7 +28,7 @@ Persistence, a lot of patience that's all you need. ***
 
 Was the answer. By the way, hi Egor if you're somehow reading this opus.
 
-I didn't need he repeat twice. Without knowing nothing about coding, I nevertheless felt the infinite expressive potential that a good programmer has. Libraries, frameworks, editors all these great tools at your disposal and most of them are free. Such an abundance and availability of tools, perhaps no other craft can boast. This idea blew my mind.
+I didn't need he repeat twice. Not knowing anything about coding, I nevertheless felt the infinite expressive potential that a good programmer has. Libraries, frameworks, editors all these great tools at your disposal and most of them are free. Such an abundance and availability of tools, perhaps no other craft can boast. This idea blew my mind.
 
 I jumped at the idea of changing my shitty job for a great new one. But how? I bought my first PC only half a year ago. WTF is
 programming? I had to find out. 

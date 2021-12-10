@@ -21,10 +21,10 @@ with me forty kilometers away from Kyiv. A fresh CS student who came to the capi
 to get a job.
 I asked him:  
 
-*** Egor, am I able to become a programmer? I'm not very good at math.***
+** Egor, am I able to become a programmer? I'm not very good at math.**
 
-*** If you don't have a brain damage you probably could manage.
-Persistence, a lot of patience that's all you need. *** 
+** If you don't have a brain damage you probably could manage.
+Persistence, a lot of patience that's all you need. **
 
 Was the answer. By the way, hi Egor if you're somehow reading this opus.
 

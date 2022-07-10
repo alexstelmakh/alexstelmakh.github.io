@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Alex Stelmakh's blog - Home</title>
+    <title>Home | Alex Stelmakh</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="">
@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://alexstelmakh.com/theme/css/style.min.css?f01e490a">
+    <link rel="stylesheet" href="https://alexstelmakh.com/theme/css/style.min.css?565b28fb">
     <link href="/favicon.ico" type="image/x-icon" rel="icon">
 
   </head>
@@ -36,12 +36,25 @@
     <h2>Categories</h2>
   </header>
 <ul>
+    <li><a href="/category/web_development">Web_development</a></li>
 </ul></section>
 <section>
   <header>
     <h2>Tags</h2>
   </header>
 <ul class="tags">
+    <li class="tag tag-size-2">
+      <a title="Posts about PHP" href="/tags/php">PHP</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about Apache" href="/tags/apache">Apache</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about MySQL" href="/tags/mysql">MySQL</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about Ubuntu" href="/tags/ubuntu">Ubuntu</a>
+    </li>
 </ul></section>
 <section>
   <header>
@@ -76,25 +89,39 @@
     <h2>Categories</h2>
 </header>
 <ul>
+    <li><a href="/category/web_development">Web_development</a></li>
 </ul></section>
 <section>
 <header>
     <h2>Tags</h2>
 </header>
 <ul class="tags">
+    <li class="tag tag-size-2">
+      <a title="Posts about PHP" href="/tags/php">PHP</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about Apache" href="/tags/apache">Apache</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about MySQL" href="/tags/mysql">MySQL</a>
+    </li>
+    <li class="tag tag-size-3">
+      <a title="Posts about Ubuntu" href="/tags/ubuntu">Ubuntu</a>
+    </li>
 </ul></section>        </div>
 
 
 <header class="index-header">
   <div class="hero">
-    <h1>Hi, I'm Alex. I am a self-taught web developer.</h1>
+    <h1>Hi, I'm Alexander Stelmakh. I am a self-taught web developer.</h1>
     <p>
-      Currently looking for a job
-      and keep learning new things. I pay more attention to the backend side, 
-      but also improving my front-end skills. My ultimate goal is to become skilled Full Stack Engineer. You
-      can check out my recent <a href="#all-posts" title="All posts">blog posts</a>, 
-      where I write about projects that I'm working on or
-      things that I have learned and other related stuff.
+      Currently looking for a job and keep learning new things. I pay more 
+      attention to the backend side, but also improving my front-end skills.
+      My ultimate goal is to become skilled Full Stack Engineer. You can check
+      out my recent <a href="#all-posts" title="All posts">blog posts</a>, where
+      I write about projects that I'm working on or things that I have learned
+      and other related stuff.
+    .
     </p>
   </div>
   
@@ -106,13 +133,30 @@
 
   <section>
     <header>
-      <h2 name="all-posts">All posts</h2>
+      <h2 id="all-posts">All posts</h2>
     </header>
     <div class="paginated-posts">
 <div class="pagination">
   </div>
   
   <div class="posts">
+    <article class="card">
+      <a href="/blog/2022/06/05/setting-up-a-dedicated-local-development-environment/">
+        <img src="/images/LAMP_stack.jpg" alt="LAMP_stack" />
+      </a>
+      <div class="body">
+        <a href="/blog/2022/06/05/setting-up-a-dedicated-local-development-environment/"><h2>Setting Up a dedicated local development environment.</h2></a>
+        <div class="info">
+      <p class="tags">
+            <a href="/tags/php" class="tag">PHP</a>
+            <a href="/tags/apache" class="tag">Apache</a>
+            <a href="/tags/mysql" class="tag">MySQL</a>
+            <a href="/tags/ubuntu" class="tag">Ubuntu</a>
+      </p>
+      <p><i class="fas fa-calendar-alt"></i> <time datetime="2022-06-05T00:00:00+03:00">Jun 5, 2022</time></p>
+        </div>
+      </div>
+    </article>
   </div>
   
   <div class="pagination">
@@ -122,12 +166,12 @@
 </div>
 
 <footer>
-  <p>Powered by Python &amp; Pelican &#169; 2020 alexstelmakh.com</p>
+    <p>Powered by Python &amp; Pelican &#169; 2020 alexstelmakh.com</p>
 </footer>
         
       </div>
     </div>
-    
+
 
     <script src="/theme/js/script.js"></script>
 

@@ -16,7 +16,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 body {
-    line-height: 1
+    line-height: 1rem
 }
 
 ol,ul {
@@ -69,15 +69,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 2.5rem
+    font-size: 1.9rem
 }
 
 h2 {
-    font-size: 1.8rem
+    font-size: 1.6rem
 }
 
 h3 {
-    font-size: 1.4rem
+    font-size: 1.3rem
 }
 
 article.card div.body h2 {
@@ -277,8 +277,7 @@ header.index-header div.hero {
 }
 
 div.hero > h1 {
-    font-size: 2rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
     margin-bottom: 1rem;
 }
 
@@ -289,6 +288,10 @@ header.index-header a {
 img.avatar {
     padding: 0.5rem;
     border: 0.3rem solid black;
+    width: 100%;
+}
+
+p>img {
     width: 100%;
 }
 
@@ -372,8 +375,9 @@ div.page-content div.pagination li.active {
     color: #A9333A
 }
 
-div.page-content h1.title {
-    margin-bottom: 2rem
+div.page-content h1 {
+    margin-bottom: 2rem;
+    line-height: 2.5rem
 }
 
 div.page-content section h3 {
@@ -416,16 +420,13 @@ article.card div.body {
 }
 
 article.card div.body a {
-    font-weight: 700;
-    text-decoration: none
+    font-weight: 900;
+    text-decoration: none;
+    /* line-height: 1.5rem */
 }
 
-article.card div.body div {
+div.body {
     line-height: 2rem
-}
-
-article.card div.body div.text {
-    line-height: 1.4rem
 }
 
 article.card div.body a.action {
@@ -515,7 +516,7 @@ div.post-content a:hover {
 }
 
 div.post-content :is(h1,h2,h3,h4,h5,h6) {
-    line-height: 3rem
+    line-height: 2rem
 }
 
 div.post-content h2 {
@@ -594,7 +595,8 @@ div.post-content code {
 }
 
 div.post-content p code,div.post-content ul code,div.post-content ol code {
-    color: #046AFB
+    color: #046AFB;
+    font-weight: 700;
 }
 
 div.post-content div.highlight {
@@ -611,7 +613,8 @@ div.post-content div.highlight span.filename {
 
 div.post-content div.highlight pre {
     background: #f8f8f8;
-    border: 1px solid black;
+    border: 2px solid rgb(174, 174, 255);
+    border-radius: 10px;
     padding: 1em 0 1em 1em;
     margin: 0;
     overflow-x: auto
@@ -713,7 +716,6 @@ div.imageblock div.title {
     div.page header button {
         display:none
     }
-
     div.page {
         width: 880px
     }
@@ -747,6 +749,23 @@ div.imageblock div.title {
     img.avatar {
         width: 70%;
     }
+}
+
+mark {
+    background: #859eca;
+    padding: 0 0.3rem 0 0.3rem;
+    border-radius: 5px;
+    color: white;
+}
+
+.note {
+    background-color: #f6f6f6;
+    border-left: 6px solid #ababab;
+    padding: 0.2rem 0.5rem 0 0.5rem;
+  }
+
+.highlight {
+    font-weight: bold
 }
 
 .highlight pre .hll {

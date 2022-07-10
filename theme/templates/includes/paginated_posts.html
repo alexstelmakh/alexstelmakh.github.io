@@ -14,7 +14,7 @@
       <p class="tags">
         {% for tag in article.tags %}
             <a href="/{{ tag.url }}" class="tag">{{ tag }}</a>
-            {% endfor %}
+        {% endfor %}
       </p>
       <p><i class="fas fa-calendar-alt"></i> <time datetime="{{ article.date.isoformat() }}">{{ article.date | strftime('%b %-d, %Y') }}</time></p>
       {% if article.modified %}

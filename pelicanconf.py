@@ -3,7 +3,8 @@ import time
 
 LOAD_CONTENT_CACHE = False
 FILENAME_METADATA = '(?P<title>.*)'
-ARTICLE_PATHS = ["new_cat", "second_cat"]
+ARTICLE_PATHS = ['articles/web_development']
+PAGE_PATHS = ['pages']
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives']
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
@@ -18,6 +19,8 @@ CATEGORY_URL = 'category/{slug}'
 ARCHIVES_URL = 'archives/'
 ARCHIVES_SAVE_AS = ARCHIVES_URL + "index.html"
 INDEX_URL = ''
+USE_FOLDER_AS_CATEGORY = True
+ARTICLE_ORDER_BY = 'reversed-date'
 
 TWITTER_USERNAME = 'AlexStelmakh'
 
@@ -39,8 +42,6 @@ EXTRA_PATH_METADATA = {"extra/favicon.ico": {"path": "favicon.ico"}}
 THEME_STATIC_PATHS = ['static']
 
 TIMEZONE = 'Europe/Kiev'
-
-DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

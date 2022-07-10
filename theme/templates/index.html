@@ -6,14 +6,15 @@
 
 <header class="index-header">
   <div class="hero">
-    <h1>Hi, I'm Alex. I am a self-taught web developer.</h1>
+    <h1>Hi, I'm Alexander Stelmakh. I am a self-taught web developer.</h1>
     <p>
-      Currently looking for a job
-      and keep learning new things. I pay more attention to the backend side, 
-      but also improving my front-end skills. My ultimate goal is to become skilled Full Stack Engineer. You
-      can check out my recent <a href="#all-posts" title="All posts">blog posts</a>, 
-      where I write about projects that I'm working on or
-      things that I have learned and other related stuff.
+      Currently looking for a job and keep learning new things. I pay more 
+      attention to the backend side, but also improving my front-end skills.
+      My ultimate goal is to become skilled Full Stack Engineer. You can check
+      out my recent <a href="#all-posts" title="All posts">blog posts</a>, where
+      I write about projects that I'm working on or things that I have learned
+      and other related stuff.
+    .
     </p>
   </div>
   
@@ -25,7 +26,7 @@
 
   <section>
     <header>
-      <h2 name="all-posts">All posts</h2>
+      <h2 id="all-posts">All posts</h2>
     </header>
     <div class="paginated-posts">
       {% include "includes/paginated_posts.html" %}
@@ -68,7 +69,6 @@
 {% endif %}
 </div>
 
-<footer>
-  <p>Powered by Python &amp; Pelican &#169; 2020 alexstelmakh.com</p>
-</footer>
+{% include "includes/footer.html" %}
+
 {% endblock %}

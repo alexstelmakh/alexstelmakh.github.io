@@ -1,6 +1,7 @@
 Title: About me
+Slug: about
 
-### Junior Back End developer based in Sumy, Ukraine. Ready for relocation within Ukraine. Open to any opportunities.
+### Junior Full Stack developer from Ukraine.
 
 My name is Alexander. I was born in 1987. I have versatile work experience
 from processing of composite materials to sales to managing small teams of five to six people in service industry.

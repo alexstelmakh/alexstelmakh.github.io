@@ -201,11 +201,9 @@ div.page header.primary {
     line-height: 0.5rem;
     padding: 1rem 0;
     align-items: center;
-    background: #6f89be;
-    color: #ffffff;
     display: flex;
     flex-direction: column;
-    height: 15vh;
+    height: 10vh;
     justify-content: center;
     position: relative
 }
@@ -213,7 +211,7 @@ div.page header.primary {
 div.page header.primary button {
     background: none;
     border: none;
-    color: #ffffff;
+    color: black;
     cursor: pointer;
     font-size: 1.5rem;
     left: 0;
@@ -710,6 +708,12 @@ div.imageblock {
 div.imageblock div.title {
     font-weight: 700;
     margin-top: 1rem
+}
+
+@media(min-width: 1280px) {
+    div.page header.primary {
+        display:none;
+    }
 }
 
 @media(min-width: 1280px) {

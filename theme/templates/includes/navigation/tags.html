@@ -1,0 +1,7 @@
+<ul class="tags">
+    {% for tag in tags %}
+    <li class="tag tag-size-{{ range(1, 4) | random }}">
+      <a title="Posts about {{ tag[0] }}" href="/{{ tag[0].url }}">{{ tag[0] }}</a>
+    </li>
+    {% endfor %}
+</ul>

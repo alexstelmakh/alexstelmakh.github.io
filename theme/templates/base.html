@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+
+  <head>
+    <title>{% block title %}{% endblock title %} | {{ AUTHOR }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="{{ SITESUBTITLE }}">
+    {% block meta_description %}{% endblock %}
+    <script src="https://kit.fontawesome.com/15214b60ba.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    {% assets filters="cssmin", output="css/style.min.css", "css/style.css" %}
+    <link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
+    {% endassets %}
+    <link href="/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="/theme/css/print.css" media="print" rel="stylesheet" />
+  </head>
+
+  <body class="preload">
+    <div class="container">
+      <div class="sidebar navigation">
+        <a href="/">
+          <div class="logo">
+            <img src="/theme/images/logo.png" alt="logo">
+          </div>
+        </a> 
+        {% include 'includes/sidebar.html' %}
+      </div>
+      <div class="page">
+        <header class="primary">
+          <button type="button">
+            <i class="fas fa-bars"></i>
+          </button>
+          <!--<p>&laquo I never lose. I either win or I learn. &raquo</p><br>
+          <p class="quote-source">Nelson Mandela</p>-->
+        </header>
+        <div class="mobile-menu navigation">
+          {% include 'includes/menu.html' %}
+        </div>
+
+        {% block content %}{% endblock %}
+        
+      </div>
+    </div>
+
+    {% block footer %}{% endblock %}
+
+    {% block custom_js %}{% endblock %}
+    <script src="/theme/js/script.js"></script>
+
+  </body>
+
+</html>

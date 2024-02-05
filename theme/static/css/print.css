@@ -1,0 +1,10 @@
+@media print {
+    /* All your print styles go here */
+    header.primary,
+    footer,
+    div.mobile-menu,
+    div.page-content div.post-info,
+    div.page-content section {
+      display: none !important;
+    }
+  }

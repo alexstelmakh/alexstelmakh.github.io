@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <title>Setting Up a dedicated local development environment. | Alex Stelmakh</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="">
+
+    <meta property='og:title' content='Setting Up a dedicated local development environment.'/>
+    <meta name="description" content="Setting Up a dedicated local development environment." />
+
+  <meta name="keywords" content="PHP, Apache, MySQL, Ubuntu" />
+
+  <meta property='og:image' content='LAMP_stack'/>
+  <meta property='og:url' content='blog/2022/06/05/setting-up-a-dedicated-local-development-environment/' />
+  
+  <meta name="description"
+        content="<p>In this article I'll show how to set up a LAMP stack which is acronim for Linux, Apache, MySQL and PHP</p>">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@AlexStelmakh" />
+  <meta name="twitter:title" content="Setting Up a dedicated local development environment." />
+  <meta name="twitter:description" content="In this article I'll show how to set up a LAMP stack which is acronim for Linux, Apache, MySQL and PHP" />
+  <meta name="twitter:image" content="https://alexstelmakh.com/images/LAMP_stack.jpg" />
+    <script src="https://kit.fontawesome.com/15214b60ba.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://alexstelmakh.com/theme/css/style.min.css?5799ddac">
+    <link href="/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="/theme/css/print.css" media="print" rel="stylesheet" />
+  </head>
+
+  <body class="preload">
+    <div class="container">
+      <div class="sidebar navigation">
+        <a href="/">
+          <div class="logo">
+            <img src="/theme/images/logo.png" alt="logo">
+          </div>
+        </a> 
+<nav>
+<div class="links">
+    <ul>
+      <li class="link"><a href="/">Homepage</a></li>
+      <li class="link"><a href="/pages/about-me">About</a></li>
+      <li class="link"><a href="/archives">Archives</a></li>
+    </ul>
+  </div></nav>
+<section>
+  <header>
+    <h2>Categories</h2>
+  </header>
+<ul>
+    <li><a href="/category/web_development">Web_development</a></li>
+</ul></section>
+<section>
+  <header>
+    <h2>Tags</h2>
+  </header>
+<ul class="tags">
+    <li class="tag tag-size-1">
+      <a title="Posts about Python" href="/tags/python">Python</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about Type Hinting" href="/tags/type-hinting">Type Hinting</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about Django" href="/tags/django">Django</a>
+    </li>
+    <li class="tag tag-size-3">
+      <a title="Posts about CI/CD" href="/tags/cicd">CI/CD</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about Deployment" href="/tags/deployment">Deployment</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about Git" href="/tags/git">Git</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about Version Control" href="/tags/version-control">Version Control</a>
+    </li>
+    <li class="tag tag-size-3">
+      <a title="Posts about PHP" href="/tags/php">PHP</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about Apache" href="/tags/apache">Apache</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about MySQL" href="/tags/mysql">MySQL</a>
+    </li>
+    <li class="tag tag-size-3">
+      <a title="Posts about Ubuntu" href="/tags/ubuntu">Ubuntu</a>
+    </li>
+</ul></section>
+<section>
+  <header>
+    <h2>Get in touch</h2>
+  </header>
+  <ul class="contact">
+    <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/alexstelmakh"> GitHub</a></li>
+    <li><i class="fab fa-linkedin-in" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/alex-stelmakh/"> LinkedIn</a></li>
+  </ul>
+</section>      </div>
+      <div class="page">
+        <header class="primary">
+          <button type="button">
+            <i class="fas fa-bars"></i>
+          </button>
+          <!--<p>&laquo I never lose. I either win or I learn. &raquo</p><br>
+          <p class="quote-source">Nelson Mandela</p>-->
+        </header>
+        <div class="mobile-menu navigation">
+<nav>
+<div class="links">
+    <ul>
+      <li class="link"><a href="/">Homepage</a></li>
+      <li class="link"><a href="/pages/about-me">About</a></li>
+      <li class="link"><a href="/archives">Archives</a></li>
+    </ul>
+  </div></nav>
+<section>
+<header>
+    <h2>Categories</h2>
+</header>
+<ul>
+    <li><a href="/category/web_development">Web_development</a></li>
+</ul></section>
+<section>
+<header>
+    <h2>Tags</h2>
+</header>
+<ul class="tags">
+    <li class="tag tag-size-2">
+      <a title="Posts about Python" href="/tags/python">Python</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about Type Hinting" href="/tags/type-hinting">Type Hinting</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about Django" href="/tags/django">Django</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about CI/CD" href="/tags/cicd">CI/CD</a>
+    </li>
+    <li class="tag tag-size-3">
+      <a title="Posts about Deployment" href="/tags/deployment">Deployment</a>
+    </li>
+    <li class="tag tag-size-3">
+      <a title="Posts about Git" href="/tags/git">Git</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about Version Control" href="/tags/version-control">Version Control</a>
+    </li>
+    <li class="tag tag-size-2">
+      <a title="Posts about PHP" href="/tags/php">PHP</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about Apache" href="/tags/apache">Apache</a>
+    </li>
+    <li class="tag tag-size-1">
+      <a title="Posts about MySQL" href="/tags/mysql">MySQL</a>
+    </li>
+    <li class="tag tag-size-3">
+      <a title="Posts about Ubuntu" href="/tags/ubuntu">Ubuntu</a>
+    </li>
+</ul></section>        </div>
+
+<div class="page-content">
+  <header>
+    <h1>Setting Up a dedicated local development environment.</h1>
+    
+    
+    <div class="post-info">
+      <p>By Alex Stelmakh - <i class="fas fa-calendar-alt"></i>
+        <time datetime="2022-06-05T00:00:00+03:00">2022/06/05</time>
+      </p>
+      <p class="tags">
+          <a class="tag category" href="/category/web_development"
+        title="All posts in category web_development">web_development</a>
+            <a class="tag" href="/tags/php">PHP</a>
+            <a class="tag" href="/tags/apache">Apache</a>
+            <a class="tag" href="/tags/mysql">MySQL</a>
+            <a class="tag" href="/tags/ubuntu">Ubuntu</a>
+      </p>
+      <p class="share"> Share on:
+<span><a class=""
+    https://www.linkedin.com/sharing/share-offsite/?url=blog/2022/06/05/setting-up-a-dedicated-local-development-environment/
+    href="https://www.linkedin.com/sharing/share-offsite/?url=blog/2022/06/05/setting-up-a-dedicated-local-development-environment/"
+    target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin"></i>
+    LinkedIn</a></span>
+<!--<span><a class=""
+    href="mailto:alex.stelmakh1@gmail.com?subject=Setting Up a dedicated local development environment.&amp;body=blog/2022/06/05/setting-up-a-dedicated-local-development-environment/"
+    target="_blank" title="Share via Email"><i class="fas fa-envelope"></i>
+    Email</a></span>
+<span><a class=""
+    href="https://www.reddit.com/submit?url=blog%2F2022%2F06%2F05%2Fsetting-up-a-dedicated-local-development-environment%2F&title=Setting Up a dedicated local development environment."
+    target="_blank" title="Share via Reddit"><i class="fab fa-reddit"></i>
+    Reddit</a></span>
+<span><a class=""
+    href="https://t.me/share/url?url=blog%2F2022%2F06%2F05%2Fsetting-up-a-dedicated-local-development-environment%2F&text=Setting Up a dedicated local development environment."
+    target="_blank" title="Share via Telegram"><i class="fab fa-telegram"></i>
+    Telegram</a></span>-->      </p>
+    </div>
+  </header>
+
+  <div class="post-content">
+    <p>If you are making the first steps with PHP then you definetely will need some sort of local development environment to run code on your own machine without the need to push it to the remote server. While it is absolutely possible to work with remote server, it'll seriously slows down development process. In this article I'm going to show how to set up a <strong>LAMP</strong> stack which is acronim for <strong>Linux</strong>, <strong>Apache</strong>, <strong>MySQl</strong> and <strong>PHP</strong>. Although this configuration has some downsides such as the lack of isolation of dev sites but if you are just starting up and not going to work on multiple projects at once it may be a good alternative to the resource hungry and more complex tools as <a href="https://www.vagrantup.com/">Vagrant</a> or <a href="https://www.docker.com/">Docker</a>. There is no doubt that for a serious development those tools are preferable and we'll get there in the forthcoming articles, but for now we are going to start with LAMP stack which nonetheless will give us a good starting point. </p>
+<p>So let's get started.</p>
+<h2>Step one - Installing Apache Web Server</h2>
+<p>Open up a terminal with ctrl+alt+t shortcut and run the command:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+
+<p>Then, install <strong>Apache</strong> with:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2
+</code></pre></div>
+
+<p>When the prompt arise hit <mark>Y</mark> to confirm installation.
+Now to verify that everything is installed properly enter to the browser local address of your newly installed server:</p>
+<div class="highlight"><pre><span></span><code>http://127.0.0.1/
+</code></pre></div>
+
+<p>Or just:</p>
+<div class="highlight"><pre><span></span><code>localhost
+</code></pre></div>
+
+<p>The output will contain all information to test correct operation of <strong>Apache2</strong> server:</p>
+<p><img alt="Apache2 Welcome Page" src="/images/apache2_default_page.jpg"></p>
+<h2>Step two - Installing MySQL</h2>
+<p>Now install database server MySQL:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mysql-server
+</code></pre></div>
+
+<p>By default MySQL and Apache will start automatically on every boot. If this is not what you want you could change that behavior. To check if the MySQL and Apache are up and running issue next commands:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>mysql
+$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div>
+
+<p>I'm going to remove those processes from autostart:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>mysql
+$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>apache2
+</code></pre></div>
+
+<p>Then on every boot if I want to work with those servises I'll need to start them like this:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>mysql
+$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
+</code></pre></div>
+
+<p>It's up to you to leave it as is, and not bother yourself starting these processes manually, but for the sake of saving resources I prefer to not having them in autostart script, because single MySQL app takes around 300MB of RAM.</p>
+<p>Log in to <strong>MySQL</strong> as root:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>mysql
+</code></pre></div>
+
+<p>List all users that present by default.</p>
+<div class="highlight"><pre><span></span><code>mysql&gt; SELECT user, host FROM mysql.user;
+</code></pre></div>
+
+<p>It'll show us a bunch of default system user accounts:</p>
+<div class="highlight"><pre><span></span><code>Output:
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| debian-sys-maint | localhost |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+</code></pre></div>
+
+<p>Now we are able to create new users and give them only those <strong>PRIVILEGES</strong> that needed.</p>
+<p>To exit from mysql type:</p>
+<div class="highlight"><pre><span></span><code>mysql&gt; exit
+</code></pre></div>
+
+<h2>Step 3 - Installing PHP</h2>
+<p>For installing <strong>PHP</strong> all we basically need is to install just <strong>PHP</strong> package. But to integrate our interpreter with Apache2 and MySQL we need two additional packages <strong>libapache2-mod-php</strong> and <strong>php-mysql</strong>. </p>
+<p>These packages can be installed with:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php<span class="w"> </span>libapache2-mod-php<span class="w"> </span>php-mysql
+</code></pre></div>
+
+<p>As the installation is finished run the following command to verify your PHP version:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>php<span class="w"> </span>-v
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Output:
+PHP 8.1.2 (cli) (built: Jun 13 2022 13:52:54) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.1.2, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.2, Copyright (c), by Zend Technologies
+</code></pre></div>
+
+<p>Now go to the default <strong>virtual host</strong> folder and create test <strong>PHP</strong> script:</p>
+<div class="highlight"><pre><span></span><code>$ cd /var/www/html
+</code></pre></div>
+
+<p>Create new folder:</p>
+<div class="highlight"><pre><span></span><code>$ sudo mkdir test
+</code></pre></div>
+
+<p>Open it and create test script:</p>
+<div class="highlight"><pre><span></span><code>$ cd test
+$ sudo vim test.php
+</code></pre></div>
+
+<p>In VIM press <mark>i</mark> to activate <strong>INSERT</strong> mode and type the following:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+</code></pre></div>
+
+<p>To exit from VIM first press <mark>ESC</mark> to exit from <mark>INSERT</mark> mode then <mark>:wq</mark>. This will save your file and exit from editor.</p>
+<p>Now go to the address bar and enter: <code>http://localhost/test/test.php</code>.</p>
+<p>You should see something like this:</p>
+<p><img alt="PHP Info Page" src="/images/php_info.jpg"></p>
+<p>Thats it! Now we are able to write and execute code, see output in the browser and connect databases. Happy coding!</p>
+  </div>
+
+
+</div>
+
+<footer>
+    <p>Powered by Python &amp; Pelican 2023 Alex Stelmakh</p>
+</footer>
+        
+      </div>
+    </div>
+
+
+    <script src="/theme/js/script.js"></script>
+
+  </body>
+
+</html>

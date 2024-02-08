@@ -62,22 +62,22 @@
     <li class="tag tag-size-2">
       <a title="Posts about Django" href="/tags/django">Django</a>
     </li>
-    <li class="tag tag-size-1">
+    <li class="tag tag-size-3">
       <a title="Posts about Application Maintenance" href="/tags/application-maintenance">Application Maintenance</a>
     </li>
-    <li class="tag tag-size-1">
+    <li class="tag tag-size-2">
       <a title="Posts about Dependency Management" href="/tags/dependency-management">Dependency Management</a>
     </li>
     <li class="tag tag-size-3">
       <a title="Posts about Best Practices" href="/tags/best-practices">Best Practices</a>
     </li>
-    <li class="tag tag-size-1">
+    <li class="tag tag-size-3">
       <a title="Posts about Security" href="/tags/security">Security</a>
     </li>
-    <li class="tag tag-size-3">
+    <li class="tag tag-size-1">
       <a title="Posts about Performance" href="/tags/performance">Performance</a>
     </li>
-    <li class="tag tag-size-3">
+    <li class="tag tag-size-1">
       <a title="Posts about Python" href="/tags/python">Python</a>
     </li>
     <li class="tag tag-size-1">
@@ -86,25 +86,25 @@
     <li class="tag tag-size-1">
       <a title="Posts about CI/CD" href="/tags/cicd">CI/CD</a>
     </li>
-    <li class="tag tag-size-1">
+    <li class="tag tag-size-2">
       <a title="Posts about Deployment" href="/tags/deployment">Deployment</a>
     </li>
-    <li class="tag tag-size-3">
+    <li class="tag tag-size-1">
       <a title="Posts about Git" href="/tags/git">Git</a>
     </li>
-    <li class="tag tag-size-3">
+    <li class="tag tag-size-2">
       <a title="Posts about Version Control" href="/tags/version-control">Version Control</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about PHP" href="/tags/php">PHP</a>
     </li>
-    <li class="tag tag-size-3">
+    <li class="tag tag-size-1">
       <a title="Posts about Apache" href="/tags/apache">Apache</a>
     </li>
     <li class="tag tag-size-1">
       <a title="Posts about MySQL" href="/tags/mysql">MySQL</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about Ubuntu" href="/tags/ubuntu">Ubuntu</a>
     </li>
 </ul></section>
@@ -152,31 +152,31 @@
     <li class="tag tag-size-3">
       <a title="Posts about Application Maintenance" href="/tags/application-maintenance">Application Maintenance</a>
     </li>
-    <li class="tag tag-size-3">
+    <li class="tag tag-size-1">
       <a title="Posts about Dependency Management" href="/tags/dependency-management">Dependency Management</a>
     </li>
-    <li class="tag tag-size-3">
+    <li class="tag tag-size-2">
       <a title="Posts about Best Practices" href="/tags/best-practices">Best Practices</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about Security" href="/tags/security">Security</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about Performance" href="/tags/performance">Performance</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-3">
       <a title="Posts about Python" href="/tags/python">Python</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about Type Hinting" href="/tags/type-hinting">Type Hinting</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about CI/CD" href="/tags/cicd">CI/CD</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-3">
       <a title="Posts about Deployment" href="/tags/deployment">Deployment</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about Git" href="/tags/git">Git</a>
     </li>
     <li class="tag tag-size-1">
@@ -185,10 +185,10 @@
     <li class="tag tag-size-1">
       <a title="Posts about PHP" href="/tags/php">PHP</a>
     </li>
-    <li class="tag tag-size-2">
+    <li class="tag tag-size-1">
       <a title="Posts about Apache" href="/tags/apache">Apache</a>
     </li>
-    <li class="tag tag-size-1">
+    <li class="tag tag-size-2">
       <a title="Posts about MySQL" href="/tags/mysql">MySQL</a>
     </li>
     <li class="tag tag-size-3">
@@ -239,87 +239,37 @@
   <div class="post-content">
     <p>Keeping Django app and its dependencies up to date is crucial for security, performance, and taking advantage of new features. Here are some best practices for maintaining a Django app:</p>
 <h3>Django Updates:</h3>
-<ol>
-<li><strong>Check for Updates Regularly:</strong></li>
-<li>
-<p>Stay informed about new Django releases and updates. Visit the official Django website or subscribe to the Django mailing list for announcements.</p>
-</li>
-<li>
-<p><strong>Follow Release Notes:</strong></p>
-</li>
-<li>
-<p>Read the release notes for each Django version. This documentation provides details about new features, bug fixes, and any backward incompatible changes.</p>
-</li>
-<li>
-<p><strong>Use LTS Versions:</strong></p>
-</li>
-<li>
-<p>If stability is a priority, consider using Long Term Support (LTS) versions. LTS versions receive security updates for an extended period, usually three years. Upgrade to the latest LTS version when it is released.</p>
-</li>
-<li>
-<p><strong>Scheduled Updates:</strong></p>
-</li>
-<li>
-<p>Plan and schedule regular updates for your Django app. This could be a monthly or quarterly process, depending on your project's requirements.</p>
-</li>
-<li>
-<p><strong>Testing:</strong></p>
-</li>
-<li>
-<p>Before updating, thoroughly test your app with the new Django version in a staging environment. Check for any issues related to backward compatibility, deprecated features, or changes in behavior.</p>
-</li>
-<li>
-<p><strong>Backup Data:</strong></p>
-</li>
-<li>Before performing any updates, ensure you have a comprehensive backup of your database and other critical data. This is a precautionary measure in case something goes wrong during the update process.</li>
-</ol>
+<p><strong>Check for Updates Regularly:</strong>
+   - Stay informed about new Django releases and updates. Visit the official Django website or subscribe to the Django mailing list for announcements.</p>
+<p><strong>Follow Release Notes:</strong>
+   - Read the release notes for each Django version. This documentation provides details about new features, bug fixes, and any backward incompatible changes.</p>
+<p><strong>Use LTS Versions:</strong>
+   - If stability is a priority, consider using Long Term Support (LTS) versions. LTS versions receive security updates for an extended period, usually three years. Upgrade to the latest LTS version when it is released.</p>
+<p><strong>Scheduled Updates:</strong>
+   - Plan and schedule regular updates for your Django app. This could be a monthly or quarterly process, depending on your project's requirements.</p>
+<p><strong>Testing:</strong>
+   - Before updating, thoroughly test your app with the new Django version in a staging environment. Check for any issues related to backward compatibility, deprecated features, or changes in behavior.</p>
+<p><strong>Backup Data:</strong>
+   - Before performing any updates, ensure you have a comprehensive backup of your database and other critical data. This is a precautionary measure in case something goes wrong during the update process.</p>
 <h3>Dependency Updates:</h3>
-<ol>
-<li><strong>Use Virtual Environments:</strong></li>
-<li>
-<p>Create a virtual environment for your Django project to isolate its dependencies. This helps avoid conflicts with other projects and facilitates easier updates.</p>
-</li>
-<li>
-<p><strong>Requirements.txt:</strong></p>
-</li>
-<li>
-<p>Maintain a <code>requirements.txt</code> file listing all your project's dependencies along with their versions. This allows for consistent installations and updates.</p>
-</li>
-<li>
-<p><strong>Automated Dependency Management:</strong></p>
-</li>
-<li>
-<p>Use tools like <code>pip-tools</code> or <code>poetry</code> to manage dependencies. These tools can automatically update the <code>requirements.txt</code> file based on your project's dependencies.</p>
-</li>
-<li>
-<p><strong>Check for Security Advisories:</strong></p>
-</li>
-<li>Regularly check for security advisories related to your project's dependencies. Services like <code>safety</code> or tools like <code>pyup.io</code> can help identify vulnerable dependencies.</li>
-</ol>
+<p><strong>Use Virtual Environments:</strong>
+   - Create a virtual environment for your Django project to isolate its dependencies. This helps avoid conflicts with other projects and facilitates easier updates.</p>
+<p><strong>Requirements.txt:</strong>
+   - Maintain a <code>requirements.txt</code> file listing all your project's dependencies along with their versions. This allows for consistent installations and updates.</p>
+<p><strong>Automated Dependency Management:</strong>
+   - Use tools like <code>pip-tools</code> or <code>poetry</code> to manage dependencies. These tools can automatically update the <code>requirements.txt</code> file based on your project's dependencies.</p>
+<p><strong>Check for Security Advisories:</strong>
+   - Regularly check for security advisories related to your project's dependencies. Services like <code>safety</code> or tools like <code>pyup.io</code> can help identify vulnerable dependencies.</p>
 <h3>LTS Version Updates:</h3>
 <p>For Django LTS versions, the update process typically involves the following:</p>
-<ol>
-<li><strong>Security Patches:</strong></li>
-<li>
-<p>LTS versions receive security updates to address vulnerabilities. Ensure that you apply these patches promptly to keep your application secure.</p>
-</li>
-<li>
-<p><strong>Bug Fixes:</strong></p>
-</li>
-<li>
-<p>LTS versions may receive bug fixes for critical issues. Monitor the Django project's communication channels for announcements regarding bug fix releases.</p>
-</li>
-<li>
-<p><strong>Backward Compatibility:</strong></p>
-</li>
-<li>
-<p>LTS updates aim to maintain backward compatibility as much as possible. However, there might be changes that could affect your application. Always review release notes and update documentation.</p>
-</li>
-<li>
-<p><strong>Community Support:</strong></p>
-</li>
-<li>Engage with the Django community through forums, mailing lists, or social media. Communities often share insights, best practices, and solutions related to updates.</li>
-</ol>
+<p><strong>Security Patches:</strong>
+   - LTS versions receive security updates to address vulnerabilities. Ensure that you apply these patches promptly to keep your application secure.</p>
+<p><strong>Bug Fixes:</strong>
+   - LTS versions may receive bug fixes for critical issues. Monitor the Django project's communication channels for announcements regarding bug fix releases.</p>
+<p><strong>Backward Compatibility:</strong>
+   - LTS updates aim to maintain backward compatibility as much as possible. However, there might be changes that could affect your application. Always review release notes and update documentation.</p>
+<p><strong>Community Support:</strong>
+   - Engage with the Django community through forums, mailing lists, or social media. Communities often share insights, best practices, and solutions related to updates.</p>
 <p>Remember that updating a Django app is an ongoing process. Regularly checking for updates, testing, and staying informed about the latest developments in the Django ecosystem will help you keep your application secure and up to date.</p>
   </div>
 
